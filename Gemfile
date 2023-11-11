@@ -15,6 +15,7 @@ gem "redis", "~> 4.0"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "haml-rails"
+gem "simple_form"
 
 
 group :development, :test do
