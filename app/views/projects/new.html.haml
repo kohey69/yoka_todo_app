@@ -1,0 +1,7 @@
+.flex-column.justify-content-center.align-items-center
+  %h1 Projects#new
+  %p Find me in app/views/projects/new.html.haml
+  = simple_form_for @project do |f|
+    = f.error_notification
+    = f.input :name
+    = f.button :submit, '登録する', class: 'btn-primary'
