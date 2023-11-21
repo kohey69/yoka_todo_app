@@ -1,9 +1,6 @@
 - if notice.present? || alert.present?
-  .toast.show.position-fixed.top-0.end-0.p-3.z-3
-    .toast-header
-      %strong.me-auto
-      %small.text-body-secondary 11 mins ago
-      %button.btn-close{"aria-label" => "Close", "data-bs-dismiss" => "toast", :type => "button"}
-    .toast-body
+  .toast.show.position-fixed.top-2.end-0.p-3.z-2
+    .toast-body.d-flex.justify-content-between
       .text-success
-        = notice
+        = notice || alert
+      %button.btn-close{"aria-label" => "Close", "data-bs-dismiss" => "toast", :type => "button"}
