@@ -1,8 +1,11 @@
-.project-navbar {
+.projects-navbar {
   z-index: 3;
+  .dropdown-menu.show {
+    z-index: 4;
+  }
 }
 
-#project-toggle {
+#projects-toggle {
   .navbar-nav {
     margin-left: auto;
   }

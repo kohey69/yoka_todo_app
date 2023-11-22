@@ -1,0 +1,20 @@
+.sidebar.d-none.d-lg-block
+  .sidebar__container.d-flex.flex-column.align-items-stretch.flex-shrink-0
+    %ul.sidebar__tasks.list-group.scrollarea
+      - 100.times.each do
+        %li.list-group-item.list-group-item-action.py-3.lh-sm.collapsed{"aria-expanded" => "false", "data-bs-target" => "#task-collapse", "data-bs-toggle" => "collapse"}
+          .d-flex.w-100.align-items-center.justify-content-between
+            %strong.mb-1 システムスペックを作成する
+            %small 2023/11/12
+          .col-10.mb-1.small システムスペックで...
+        #task-collapse.sidebar__milestones.collapse.list-group
+          %li.list-group-item.list-group-item-action.py-3.lh-sm
+            .d-flex.w-100.align-items-center.justify-content-between
+              %strong.mb-1 正常系を作成する
+              %small 2023/11/12
+            .col-10.mb-1.small メソッドを確認して...
+          %li.list-group-item.list-group-item-action.py-3.lh-sm
+            .d-flex.w-100.align-items-center.justify-content-between
+              %strong.mb-1 異常系を作成する
+              %small 2023/11/12
+            .col-10.mb-1.small メソッドを確認して...
