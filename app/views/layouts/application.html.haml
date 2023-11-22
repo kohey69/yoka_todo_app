@@ -11,6 +11,11 @@
   %body
     = render 'layouts/header'
     = render 'layouts/toast'
-    = render 'layouts/sidebar' if current_page?(root_path)
-    .main-container.d-flex.flex-column.justify-content-center.align-items-center
-      = yield
+    - if @project
+      .d-flex
+        = render 'layouts/sidebar'
+        .container.d-flex.flex-column.justify-content-center.align-items-center
+          = yield
+    - else
+      .container.d-flex.flex-column.justify-content-center.align-items-center
+        = yield
