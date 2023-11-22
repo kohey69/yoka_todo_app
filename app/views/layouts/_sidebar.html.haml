@@ -1,12 +1,18 @@
-.d-flex.flex-column.align-items-stretch.flex-shrink-0.bg-body-tertiary{:style => "width: 380px;"}
-  %a.d-flex.align-items-center.flex-shrink-0.p-3.link-body-emphasis.text-decoration-none.border-bottom{:href => "/"}
-    %svg.bi.pe-none.me-2{:height => "24", :width => "30"}
-      %use{"xlink:href" => "#bootstrap"}
-    %span.fs-5.fw-semibold タスク一覧
-  .list-group.list-group-flush.border-bottom.scrollarea
-    %a.list-group-item.list-group-item-action.active.py-3.lh-sm{"aria-current" => "true", :href => "#"}
+.project-sidebar.d-flex.flex-column.align-items-stretch.flex-shrink-0
+  %ul.list-group.scrollarea
+    %li.list-group-item.list-group-item-action.py-3.lh-sm.collapsed{"aria-expanded" => "false", "data-bs-target" => "#task-collapse", "data-bs-toggle" => "collapse"}
       .d-flex.w-100.align-items-center.justify-content-between
         %strong.mb-1 システムスペックを作成する
         %small 2023/11/12
       .col-10.mb-1.small システムスペックで...
-
+    #task-collapse.collapse.list-group
+      %li.list-group-item.list-group-item-action.py-3.lh-sm
+        .d-flex.w-100.align-items-center.justify-content-between
+          %strong.mb-1 正常系を作成する
+          %small 2023/11/12
+        .col-10.mb-1.small メソッドを確認して...
+      %li.list-group-item.list-group-item-action.py-3.lh-sm
+        .d-flex.w-100.align-items-center.justify-content-between
+          %strong.mb-1 異常系を作成する
+          %small 2023/11/12
+        .col-10.mb-1.small メソッドを確認して...
