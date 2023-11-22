@@ -11,7 +11,7 @@
   %body
     = render 'layouts/header'
     = render 'layouts/toast'
-    - if @project
+    - if project_path?(@project)
       .d-flex
         = render 'layouts/sidebar'
         .container.d-flex.flex-column.justify-content-center.align-items-center
