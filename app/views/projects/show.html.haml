@@ -1,1 +1,11 @@
 %h1 showページ
+.container
+  %ul.nav.nav-tabs.w-100
+    %li.nav-item
+      %a.nav-link.active{"aria-current" => "page", :href => "#"} 実行中
+    %li.nav-item
+      %a.nav-link{:href => "#"} 完了済み
+  .tasks-container.container
+    .card
+      .card-header システムスペックを作成する
+      .card-body システムスペックで

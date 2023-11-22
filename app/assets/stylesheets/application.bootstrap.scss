@@ -1,7 +1,10 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-// views
+// views/layouts
 @import 'views/layouts/_header';
 @import 'views/layouts/_sidebar';
 @import 'views/layouts/_toast';
+
+//views/projects
+@import 'views/projects/_projects-show';
