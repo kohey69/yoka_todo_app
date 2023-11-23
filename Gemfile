@@ -16,6 +16,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "haml-rails"
 gem "simple_form"
+gem "acts_as_list"
+gem "sentry-ruby", "~> 5.13" #fly.ioのデプロイ時に自動生成
+gem "sentry-rails", "~> 5.13" #fly.ioのデプロイ時に自動生成
 
 
 group :development, :test do
@@ -25,15 +28,10 @@ end
 
 group :development do
   gem "web-console"
+  gem "dockerfile-rails", ">= 1.5" #fly.ioのデプロイ時に自動生成
 end
 
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "dockerfile-rails", ">= 1.5", :group => :development
-
-gem "sentry-ruby", "~> 5.13"
-
-gem "sentry-rails", "~> 5.13"
