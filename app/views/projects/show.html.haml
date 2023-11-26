@@ -3,16 +3,9 @@
   .projects-show__container
     .projects-show__header
       %h1 タスク一覧
-      %button.btn.btn-sm.btn-outline-secondary タスクを追加する
-    - 20.times.each do
-      .projects-show__tasks.container
-        %ul.nav.nav-tabs.w-100
-          %li.nav-item
-            %a.nav-link.active{"aria-current" => "page", :href => "#"} 実行中
-          %li.nav-item
-            %a.nav-link{:href => "#"} 完了済み
-        .projects-show__milestones.container
-          %h2 システムスペックを作成する
-          .card
-            .card-header 正常系を作成する
-            .card-body システムスペックで
+      %button.btn.btn-sm.btn-outline-secondary{"data-bs-target" => "#projects-show__new-task-modal", "data-bs-toggle" => "modal", :type => "button"}タスクを追加する
+    .projects-show__tasks
+      - @tasks.each do |task|
+        = render 'task', task: task
+#projects-show__new-task-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "projects-show__new-task-modalLabel", :tabindex => "-1"}
+  = render 'new-task-modal'

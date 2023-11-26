@@ -1,0 +1,11 @@
+.modal-dialog
+  .modal-content
+    .modal-header
+      %h1#projects-show__new-task-modalLabel.modal-title.fs-5 新しいタスクを作成する
+      %button.btn-close{"aria-label" => "Close", "data-bs-dismiss" => "modal", :type => "button"}
+    .modal-body
+      = simple_form_for [@project, @task] do |f|
+        = f.error_notification
+        = f.input :name
+        %button.btn.btn-secondary{"data-bs-dismiss" => "modal", :type => "button"} キャンセル
+        = f.button :submit, '登録する', class: 'btn-primary'

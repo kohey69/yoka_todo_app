@@ -2,6 +2,8 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @tasks = @project.tasks.default_order
+    @task = @project.tasks.build
   end
   def new
     @project = Project.new
