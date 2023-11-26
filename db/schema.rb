@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_26_071133) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status", default: "in_progress"
+    t.text "description"
     t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 
