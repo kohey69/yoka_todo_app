@@ -7,7 +7,7 @@
       %ul.navbar-nav
         %li.nav-item.dropdown
           %a.nav-link.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", :href => "#"}
-            - if @project.persisted?
+            - if @project&.persisted?
               = @project.name
             - else
               = '新規プロジェクト作成'
