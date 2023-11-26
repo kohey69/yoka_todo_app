@@ -1,11 +1,11 @@
 .sidebar.d-none.d-lg-block
   .sidebar__container.d-flex.flex-column.align-items-stretch.flex-shrink-0
     %ul.sidebar__tasks.list-group.scrollarea
-      - @tasks.each do |task|
+      - @tasks.in_progress.each do |task|
         %li.list-group-item.list-group-item-action.py-3.lh-sm.collapsed{"aria-expanded" => "false", "data-bs-target" => "#task-collapse-#{task.id}", "data-bs-toggle" => "collapse"}
           .d-flex.w-100.align-items-center.justify-content-between
-            %strong.mb-1=task.name
-            %small=task.created_at
+            %strong.mb-1= task.name
+            %small= task.created_at
         .sidebar__milestones.collapse.list-group{ id: "task-collapse-#{task.id}"}
           %li.list-group-item.list-group-item-action.py-3.lh-sm
             .d-flex.w-100.align-items-center.justify-content-between
