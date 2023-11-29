@@ -11,7 +11,7 @@
               = @project.name
             - else
               = '新規プロジェクト作成'
-          %ul.dropdown-menu
+          %ul.dropdown-menu.dropdown-menu-end
             - @projects.each do |project|
               %li
                 = link_to project.name, project_path(project), class: 'dropdown-item'

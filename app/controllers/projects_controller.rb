@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: %w[show edit update]
 
   def show
-    @project = Project.find(params[:id])
     @tasks = @project.tasks.default_order
     @task = @project.tasks.build
   end
@@ -18,8 +18,24 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @project.update!(project_params)
+    redirect_to project_path(@project), notice: 'プロジェクトを更新しました'
+  end
+
+  def destroy
+
+  end
+
   private
   def project_params
     params.require(:project).permit(:name)
+  end
+
+  def set_project
+    @project = Project.find(params[:id])
   end
 end

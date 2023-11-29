@@ -2,15 +2,16 @@
   = render 'sidebar'
   .projects-show__container
     .projects-show__header
-      %h1 タスク一覧
-      %button.btn.btn-sm.btn-outline-secondary{"data-bs-target" => "#projects-show__new-task-modal", "data-bs-toggle" => "modal", :type => "button"}タスクを追加する
+      %h1=@project.name
+      = link_to 'プロジェクトを編集する', edit_project_path(@project), class: 'btn btn-secondary'
     .projects-show__tasks
       .container
-        %ul.nav.nav-tabs.w-100
+        %ul.nav.nav-tabs
           %li.nav-item{role: 'presentation'}
             %a.nav-link.active{"aria-controls" => "in-progress-tab-pane", "aria-selected" => "true", "data-bs-target" => "#in-progress-tab-pane", "data-bs-toggle" => "tab", :role => "tab", :type => "button"} 実行中
           %li.nav-item{role: 'presentation'}
             %a.nav-link{"aria-controls" => "completed-tab-pane", "aria-selected" => "false", "data-bs-target" => "#completed-tab-pane", "data-bs-toggle" => "tab", :role => "tab", :type => "button"} 完了済み
+          %button.btn.btn-sm.btn-outline-secondary{"data-bs-target" => "#projects-show__new-task-modal", "data-bs-toggle" => "modal", :type => "button"}タスクを追加する
         .tab-content
           #in-progress-tab-pane.tab-pane.fade.show.active
             = render 'in-progress-tasks', tasks: @tasks
