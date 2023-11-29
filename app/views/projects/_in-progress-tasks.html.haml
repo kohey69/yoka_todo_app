@@ -2,8 +2,8 @@
 
 - if in_progress_tasks.present?
   - in_progress_tasks.each do |task|
-    .projects-show__milestones
+    .in-progress-task
       = render 'task', task: task
 - else
-  .projects-show__milestones
+  .in-progress-task
     実行中タスクはありません

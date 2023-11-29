@@ -2,8 +2,8 @@
 
 - if completed_tasks.present?
   - completed_tasks.each do |task|
-    .projects-show__milestones
+    .completed-task
       = render 'task', task: task
 - else
-  .projects-show__milestones
+  .completed-task
     完了済みタスクはありません
