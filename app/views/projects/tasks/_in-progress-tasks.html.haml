@@ -3,7 +3,7 @@
 - if in_progress_tasks.present?
   - in_progress_tasks.each do |task|
     .in-progress-task
-      = render 'task', task: task
+      = render 'projects/tasks/task', task: task
 - else
   .in-progress-task
     実行中タスクはありません

@@ -3,7 +3,7 @@
 - if completed_tasks.present?
   - completed_tasks.each do |task|
     .completed-task
-      = render 'task', task: task
+      = render 'projects/tasks/task', task: task
 - else
   .completed-task
     完了済みタスクはありません
