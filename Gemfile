@@ -20,6 +20,7 @@ gem "acts_as_list"
 gem "enumerize"
 gem "sentry-ruby", "~> 5.13" #fly.ioのデプロイ時に自動生成
 gem "sentry-rails", "~> 5.13" #fly.ioのデプロイ時に自動生成
+gem "view_component"
 
 
 group :development, :test do
