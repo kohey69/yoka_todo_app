@@ -14,6 +14,11 @@
   z-index: 2;
   border-bottom: 1px solid lightgrey;
   background-color: white;
+
+  h1 {
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
 
 .projects-show__tasks {
@@ -51,4 +56,9 @@
   border-bottom: 1px solid gray;
   padding: 20px;
   background-color: white;
+}
+
+h2.task__name{
+  font-size: 18px;
+  font-weight: bolder;
 }
