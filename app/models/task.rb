@@ -7,6 +7,6 @@ class Task < ApplicationRecord
   belongs_to :project
 
   scope :default_order, -> { order(position: :asc) }
-  scope :in_progress, -> { where(status: 'in_progress').order(position: :asc) }
-  scope :completed, -> { where(status: 'completed').order(position: :asc) }
+  scope :in_progress, -> { where(status: 'in_progress') }
+  scope :completed, -> { where(status: 'completed') }
 end
