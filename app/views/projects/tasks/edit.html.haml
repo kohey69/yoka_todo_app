@@ -1,0 +1,6 @@
+= turbo_frame_tag @task do
+  = simple_form_for [@project, @task] do |f|
+    = f.error_notification
+    = f.input :name, label: false, class: false
+    = f.input :description, label: false, input_html: { class: false }
+    = f.button :submit, class: 'btn-primary'
