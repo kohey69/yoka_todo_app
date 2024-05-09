@@ -5,6 +5,11 @@ class Projects::TasksController < ApplicationController
     redirect_to project_path(@project)
   end
 
+  def update
+    @task.update!(task_params)
+    redirect_to project_path(@project)
+  end
+
   private
 
   def set_project

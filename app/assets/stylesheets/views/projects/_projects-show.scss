@@ -25,8 +25,9 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  .nav.nav-tabs {
-    border-bottom: 1px solid gray;
+  ul.nav.nav-tabs {
+    padding-right: 10px;
+    padding-left: 10px;
     button {
       margin-left: auto;
       align-self: center;
@@ -34,28 +35,19 @@
   }
 
   .nav-item {
-    border-top: 1px solid gray;
-    border-right: 1px solid gray;
-    border-left: 1px solid gray;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
   }
 }
 
 .in-progress-task {
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  border-bottom: 1px solid gray;
   padding: 20px;
-  background-color: white;
+  border-bottom: 1px solid lightgrey;
 }
 
 .completed-task {
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  border-bottom: 1px solid gray;
   padding: 20px;
-  background-color: white;
+  border-bottom: 1px solid lightgrey;
 }
 
 h2.task__name{
