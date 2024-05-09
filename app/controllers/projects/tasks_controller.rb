@@ -1,4 +1,4 @@
-class TasksController < ApplicationController
+class Projects::TasksController < ApplicationController
   before_action :set_project
   def create
     @task = @project.tasks.create!(task_params)

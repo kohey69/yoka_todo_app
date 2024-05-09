@@ -1,0 +1,4 @@
+%h2.task__name= task.name
+- if task.description
+  .task__description
+    = safe_join(task.description.split("\n"),tag(:br))
