@@ -13,8 +13,8 @@
         %button.btn.btn-sm.btn-outline-secondary{"data-bs-target" => "#projects-show__new-task-modal", "data-bs-toggle" => "modal", :type => "button"}タスクを追加する
       .tab-content
         #in-progress-tab-pane.tab-pane.fade.show.active
-          = render 'projects/tasks/in-progress-tasks', tasks: @tasks
+          = render ProjectTasksComponent.new(project: @project, tasks: @tasks.in_progress, completed: false)
         #completed-tab-pane.tab-pane.fade
-          = render 'projects/tasks/completed-tasks', tasks: @tasks
+          = render ProjectTasksComponent.new(project: @project, tasks: @tasks.completed, completed: true)
 #projects-show__new-task-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "projects-show__new-task-modalLabel", :tabindex => "-1"}
   = render 'new-task-modal'

@@ -3,7 +3,8 @@
 - if completed_tasks.present?
   - completed_tasks.each do |task|
     .completed-task
-      = render 'projects/tasks/task', task: task
+      = turbo_frame_tag task do
+        = render TaskDetailComponent.new(task: task)
 - else
   .completed-task
     完了済みタスクはありません

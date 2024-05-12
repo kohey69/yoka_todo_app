@@ -1,0 +1,9 @@
+.task
+  - if @task.present?
+    = turbo_frame_tag @task do
+      %h2.task__name= @task.name
+      - if @task.description.present?
+        .task__description= safe_join(@task.description.split("\n"),tag(:br))
+      = link_to '編集する', edit_project_task_path(@task.project, @task), class: 'btn btn-primary'
+  - else
+    タスクがありません

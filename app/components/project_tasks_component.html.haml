@@ -1,0 +1,6 @@
+.tasks{ class: task_status_class }
+  - if @tasks.present?
+    - @tasks.each do |task|
+      = render TaskDetailComponent.new(task:)
+  - else
+    = render TaskDetailComponent.new(task: nil)
