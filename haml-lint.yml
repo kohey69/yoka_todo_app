@@ -17,7 +17,10 @@ linters:
 
   # 1行の文字数
   LineLength:
-    max: 160
+    max: 300
+
+  ViewLength:
+    max: 150
 
   # rubyコードはrubocopでチェックする
   RuboCop:
@@ -25,3 +28,34 @@ linters:
     # kaminariが生成するviewはチェックしない
     exclude:
       - app/views/kaminari/**/*
+    # These cops are incredibly noisy when it comes to HAML templates, so we
+    # ignore them.
+    ignored_cops:
+      - Layout/ArgumentAlignment
+      - Layout/BlockAlignment
+      - Layout/ElseAlignment
+      - Layout/EmptyLineAfterGuardClause
+      - Layout/EndAlignment
+      - Layout/EndOfLine
+      - Layout/HashAlignment
+      - Layout/IndentationWidth
+      # エディタによってはコメントアウト時にスペースがつかないことがあるため
+      # コメント後のスペースは制限しない
+      - Layout/LeadingCommentSpace
+      - Layout/LineLength
+      - Layout/ParameterAlignment
+      - Layout/TrailingEmptyLines
+      - Layout/TrailingWhitespace
+      - Lint/Void
+      - Metrics/BlockLength
+      - Metrics/BlockNesting
+      - Naming/FileName
+      - Style/FrozenStringLiteralComment
+      - Style/IfUnlessModifier
+      - Style/MultilineTernaryOperator
+      - Style/Next
+      - Style/WhileUntilModifier
+
+  # Hash属性の内側にスペースはなくてもよい
+  SpaceInsideHashAttributes:
+    enabled: false
