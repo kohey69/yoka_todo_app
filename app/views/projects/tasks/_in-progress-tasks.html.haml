@@ -4,7 +4,7 @@
   - in_progress_tasks.each do |task|
     .in-progress-task
       = turbo_frame_tag task do
-        = render 'projects/tasks/task', task: task
+        = render TaskDetailComponent.new(task: task)
 - else
   .in-progress-task
     実行中タスクはありません
