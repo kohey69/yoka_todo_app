@@ -324,19 +324,19 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
-  dockerfile-rails (>= 1.5)
+  dockerfile-rails
   enumerize
   erb2haml
   haml-rails
   jbuilder
   jsbundling-rails
-  pg (~> 1.1)
-  puma (~> 5.0)
-  rails (~> 7.0.8)
-  redis (~> 4.0)
+  pg
+  puma
+  rails
+  redis
   selenium-webdriver
-  sentry-rails (~> 5.13)
-  sentry-ruby (~> 5.13)
+  sentry-rails
+  sentry-ruby
   sgcop!
   simple_form
   sprockets-rails

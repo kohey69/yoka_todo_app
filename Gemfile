@@ -11,12 +11,12 @@ gem 'enumerize'
 gem 'haml-rails'
 gem 'jbuilder'
 gem 'jsbundling-rails'
-gem 'pg', '~> 1.1'
-gem 'puma', '~> 5.0'
-gem 'rails', '~> 7.0.8'
-gem 'redis', '~> 4.0'
-gem 'sentry-rails', '~> 5.13' # fly.ioのデプロイ時に自動生成
-gem 'sentry-ruby', '~> 5.13' # fly.ioのデプロイ時に自動生成
+gem 'pg'
+gem 'puma'
+gem 'rails'
+gem 'redis'
+gem 'sentry-rails' # fly.ioのデプロイ時に自動生成
+gem 'sentry-ruby' # fly.ioのデプロイ時に自動生成
 gem 'sgcop', github: 'SonicGarden/sgcop'
 gem 'simple_form'
 gem 'sprockets-rails'
@@ -31,7 +31,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'dockerfile-rails', '>= 1.5' # fly.ioのデプロイ時に自動生成
+  gem 'dockerfile-rails' # fly.ioのデプロイ時に自動生成
   gem 'web-console'
 end
 
