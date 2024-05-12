@@ -1,0 +1,7 @@
+.task{ class: task_status_class }
+  - if @tasks.present?
+    - @tasks.each do |task|
+      = turbo_frame_tag task do
+        = render TaskDetailComponent.new(task: task)
+  - else
+    完了済みタスクはありません
