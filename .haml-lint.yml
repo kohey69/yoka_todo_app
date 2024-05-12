@@ -55,7 +55,6 @@ linters:
       - Style/MultilineTernaryOperator
       - Style/Next
       - Style/WhileUntilModifier
-      - Lint/MissingSuper
 
   # Hash属性の内側にスペースはなくてもよい
   SpaceInsideHashAttributes:
