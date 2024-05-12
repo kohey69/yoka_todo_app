@@ -21,7 +21,7 @@ gem "enumerize"
 gem "sentry-ruby", "~> 5.13" #fly.ioのデプロイ時に自動生成
 gem "sentry-rails", "~> 5.13" #fly.ioのデプロイ時に自動生成
 gem "view_component"
-
+gem 'sgcop', github: 'SonicGarden/sgcop'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
