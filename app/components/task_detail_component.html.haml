@@ -1,9 +1,10 @@
-.task
-  - if @task.present?
+- if @task.present?
+  .task{ data: { sortable_update_url: project_task_path(@task.project, @task, format: :json) } }
     = turbo_frame_tag @task do
       = link_to edit_project_task_path(@task.project, @task), class: 'task__edit-link' do
         %h2.task__name= @task.name
         - if @task.description.present?
           .task__description= safe_join(@task.description.split("\n"),tag(:br))
-  - else
+- else
+  .task
     タスクがありません
