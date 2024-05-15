@@ -1,6 +1,5 @@
 = turbo_frame_tag @task do
-  = simple_form_for [@project, @task] do |f|
+  = simple_form_for [@project, @task], data: { controller: "auto-submit", auto_submit_target: "form" } do |f|
     = f.error_notification
     = f.input :name, label: false, class: false
-    = f.input :description, label: false, input_html: { class: false }
-    = f.button :submit, class: 'btn-primary'
+    = f.input :description, label: false, input_html: { class: false, data: { action: "blur->auto-submit#submit" } }
