@@ -1,10 +1,16 @@
 - if @task.present?
   .task{ data: { sortable_update_url: project_task_path(@task.project, @task, format: :json) } }
+    .task__header
+      %h2.task__name= @task.name
+      = simple_form_for [@task.project, @task], data: { controller: "auto-submit", auto_submit_target: "form" } do |f|
+        = f.input :completed, input_html: { id: "task_completed_#{@task.id}", data: { action: "click->auto-submit#submit" } }
     = turbo_frame_tag @task do
       = link_to edit_project_task_path(@task.project, @task), class: 'task__edit-link' do
-        %h2.task__name= @task.name
-        - if @task.description.present?
-          .task__description= safe_join(@task.description.split("\n"),tag(:br))
+        .task__description
+          - if @task.description.present?
+            = safe_join(@task.description.split("\n"),tag(:br))
+          - else
+            .text-muted.small ここをクリックして編集できます
 - else
   .task
     タスクがありません
