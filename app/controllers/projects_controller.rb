@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
     @tasks = @project.tasks.default_order
     @task = @project.tasks.build
   end
+
   def new
     @project = Project.new
   end
@@ -27,15 +28,15 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-
   end
 
   private
-  def project_params
-    params.require(:project).permit(:name)
-  end
 
-  def set_project
-    @project = Project.find(params[:id])
-  end
+    def project_params
+      params.fetch(:project).permit(:name)
+    end
+
+    def set_project
+      @project = Project.find(params[:id])
+    end
 end

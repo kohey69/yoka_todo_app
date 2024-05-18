@@ -1,4 +1,4 @@
-.tasks{ class: task_status_class }
+.tasks{ class: task_status_class, data: { controller: 'sortable', sortable_resource_name_value: 'task' } }
   - if @tasks.present?
     - @tasks.each do |task|
       = render TaskDetailComponent.new(task:)
