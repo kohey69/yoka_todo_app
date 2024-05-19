@@ -3,14 +3,15 @@
   .projects-show__container
     .projects-show__header
       %h1=@project.name
-      = link_to 'プロジェクトを編集する', edit_project_path(@project), class: 'btn btn-secondary'
+      = link_to edit_project_path(@project) do
+        = icon_with_text('regular', 'pen-to-square', '編集する')
     .projects-show__tasks
       %ul.nav.nav-tabs
         %li.nav-item{role: 'presentation'}
           %a.nav-link.active{"aria-controls" => "in-progress-tab-pane", "aria-selected" => "true", "data-bs-target" => "#in-progress-tab-pane", "data-bs-toggle" => "tab", :role => "tab", :type => "button"} 実行中
         %li.nav-item{role: 'presentation'}
           %a.nav-link{"aria-controls" => "completed-tab-pane", "aria-selected" => "false", "data-bs-target" => "#completed-tab-pane", "data-bs-toggle" => "tab", :role => "tab", :type => "button"} 完了済み
-        %button.btn.btn-sm.btn-outline-secondary{"data-bs-target" => "#projects-show__new-task-modal", "data-bs-toggle" => "modal", :type => "button"}タスクを追加する
+        %button.btn.btn-sm.btn-outline-secondary{"data-bs-target" => "#projects-show__new-task-modal", "data-bs-toggle" => "modal", :type => "button"}= icon_with_text('solid', 'circle-plus', 'タスク追加')
       .tab-content
         #in-progress-tab-pane.tab-pane.fade.show.active
           = render ProjectTasksComponent.new(project: @project, tasks: @tasks.in_progress, completed: false)
