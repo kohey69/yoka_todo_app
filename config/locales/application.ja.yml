@@ -1,0 +1,18 @@
+ja:
+  controller:
+    destroyed: '削除されました'
+    created: '登録しました'
+    updated: '登録しました'
+  activerecord:
+    models:
+      project: プロジェクト
+      task: タスク
+    attributes:
+      project:
+        name: プロジェクト名
+      task:
+        name: タスク名
+        position: 優先順位
+        description: 説明ドキュメント
+        completed_at: 完了日時
+        completed: 完了ステータスにする
